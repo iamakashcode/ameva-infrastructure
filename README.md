@@ -53,13 +53,16 @@ Brand tokens live in `src/app/globals.css` under `@theme`, derived from the logo
 | `steel-300` / `steel-400` | accent on dark bands |
 | `sand-400` | sparing highlight (star ratings) |
 
-**Sections that stay dark:** the home hero, `PageHero` on every inner page, the
-project detail hero, the stats band, the CTA band, the footer, and the 404.
+**Sections that stay dark:** `PageHero` on every inner page, the project detail
+hero, the stats band, the CTA band, the footer, and the 404. The **home hero is
+light** — an editorial split with the featured projects built into it.
 
-> **Convention:** every page opens with a dark band. The navbar is transparent with
-> light text over it and inverts to a cream glass bar with navy text once scrolled.
-> A new page that starts on cream would leave the navbar illegible — give it a
-> `PageHero` (or a dark top section) like the other routes.
+> **Convention:** the navbar is transparent over the hero and inverts to a cream
+> glass bar with navy text once scrolled. Because its ink has to match the band
+> underneath, `src/lib/nav.ts` maps routes to hero tone — the home page is listed
+> as light, everything else defaults to dark. **A new page that opens on cream must
+> be added to `LIGHT_HERO_ROUTES`**, or its navbar links will be cream-on-cream.
+> It resolves during render from the pathname, so there is no first-paint flash.
 
 **Light vs. dark variants.** Shared components take an explicit flag rather than
 guessing:

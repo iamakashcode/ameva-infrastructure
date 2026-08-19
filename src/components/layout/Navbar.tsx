@@ -8,6 +8,7 @@ import { EASE, EASE_IN_OUT } from "@/lib/motion";
 import { useEffect, useState } from "react";
 import { Menu, Phone, X } from "lucide-react";
 import { navLinks, site } from "@/lib/site";
+import { hasDarkHero } from "@/lib/nav";
 import { featuredProjects } from "@/lib/projects";
 import { Magnetic } from "@/components/ui/MagneticButton";
 
@@ -31,10 +32,14 @@ export function Navbar() {
     setOpen(false);
   }
 
-  // Every page opens on a dark image hero, so the bar starts light and inverts once condensed.
-  const ink = scrolled ? "text-navy-900" : "text-cream-100";
-  const inkMuted = scrolled ? "text-navy-900/70" : "text-cream-100/75";
-  const rule = scrolled ? "border-navy-900/20" : "border-cream-100/20";
+  // The home hero is a light band; every other route opens on a dark one.
+  // Once the bar condenses it always uses navy ink on cream glass.
+  const overDark = !scrolled && hasDarkHero(pathname);
+  const inverted = !overDark;
+
+  const ink = inverted ? "text-navy-900" : "text-cream-100";
+  const inkMuted = inverted ? "text-navy-900/70" : "text-cream-100/75";
+  const rule = inverted ? "border-navy-900/20" : "border-cream-100/20";
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
@@ -57,7 +62,7 @@ export function Navbar() {
       >
         <nav className="container-x flex items-center justify-between gap-6">
           <Link href="/" className="group flex items-center gap-3" aria-label={site.name}>
-            <span className={`relative size-10 overflow-hidden rounded-lg ring-1 transition-transform duration-500 group-hover:scale-105 sm:size-11 ${scrolled ? "ring-navy-900/12" : "ring-cream-100/15"}`}>
+            <span className={`relative size-10 overflow-hidden rounded-lg ring-1 transition-transform duration-500 group-hover:scale-105 sm:size-11 ${inverted ? "ring-navy-900/12" : "ring-cream-100/15"}`}>
               <Image
                 src="/logo.jpeg"
                 alt=""
@@ -71,7 +76,7 @@ export function Navbar() {
               <span className={`font-display text-xl tracking-tight transition-colors duration-500 sm:text-[1.35rem] ${ink}`}>
                 Ameva
               </span>
-              <span className={`mt-1 text-[0.5rem] font-medium tracking-[0.34em] transition-colors duration-500 sm:text-[0.55rem] ${scrolled ? "text-steel-600" : "text-steel-300"}`}>
+              <span className={`mt-1 text-[0.5rem] font-medium tracking-[0.34em] transition-colors duration-500 sm:text-[0.55rem] ${inverted ? "text-steel-600" : "text-steel-300"}`}>
                 INFRASTRUCTURE
               </span>
             </span>
@@ -86,12 +91,12 @@ export function Navbar() {
                 <li key={l.href}>
                   <Link
                     href={l.href}
-                    className={`group relative block px-4 py-2 text-sm transition-colors duration-300 ${inkMuted} ${scrolled ? "hover:text-navy-900" : "hover:text-cream-100"}`}
+                    className={`group relative block px-4 py-2 text-sm transition-colors duration-300 ${inkMuted} ${inverted ? "hover:text-navy-900" : "hover:text-cream-100"}`}
                   >
                     {l.label}
                     <span
                       className={`absolute inset-x-4 bottom-1 h-px origin-left transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-                        scrolled ? "bg-steel-600" : "bg-steel-300"
+                        inverted ? "bg-steel-600" : "bg-steel-300"
                       } ${
                         active ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
                       }`}
@@ -105,7 +110,7 @@ export function Navbar() {
           <div className="flex items-center gap-3">
             <a
               href={`tel:${site.phoneHref}`}
-              className={`hidden items-center gap-2 text-sm transition-colors xl:flex ${inkMuted} ${scrolled ? "hover:text-navy-900" : "hover:text-cream-100"}`}
+              className={`hidden items-center gap-2 text-sm transition-colors xl:flex ${inkMuted} ${inverted ? "hover:text-navy-900" : "hover:text-cream-100"}`}
             >
               <Phone className="size-3.5" strokeWidth={1.75} />
               {site.phone}
@@ -115,11 +120,11 @@ export function Navbar() {
               <Magnetic strength={0.25}>
               <Link
                 href="/contact"
-                className={`group relative inline-flex items-center overflow-hidden rounded-full px-6 py-2.5 text-sm font-medium transition-colors duration-500 ${scrolled ? "bg-navy-900 text-cream-50" : "bg-cream-100 text-navy-950"}`}
+                className={`group relative inline-flex items-center overflow-hidden rounded-full px-6 py-2.5 text-sm font-medium transition-colors duration-500 ${inverted ? "bg-navy-900 text-cream-50" : "bg-cream-100 text-navy-950"}`}
               >
                 <span
                   aria-hidden
-                  className={`absolute inset-0 origin-bottom scale-y-0 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-y-100 ${scrolled ? "bg-steel-600" : "bg-steel-400"}`}
+                  className={`absolute inset-0 origin-bottom scale-y-0 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-y-100 ${inverted ? "bg-steel-600" : "bg-steel-400"}`}
                 />
                 <span className="relative z-10">Enquire Now</span>
               </Link>
