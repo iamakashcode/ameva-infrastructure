@@ -24,8 +24,8 @@
   --color-sand-400: #c6a468;
   --color-sand-300: #d9bd8b;
 
-  --font-display: var(--font-instrument), ui-serif, Georgia, serif;
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
 
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 
@@ -77,9 +77,13 @@
 
   h1, h2, h3, h4 {
     font-family: var(--font-display);
-    font-weight: 400;
+    font-weight: 700;
     letter-spacing: -0.02em;
   }
+
+  .font-display { font-weight: 700; }
+
+  body { font-weight: 500; }
 
   /* Scrollbar */
   ::-webkit-scrollbar { width: 10px; }

@@ -6,34 +6,34 @@ import { Reveal } from "@/components/ui/Reveal";
 
 const milestones = [
   {
-    year: "2007",
-    title: "The first 22 acres",
-    copy: "Ameva is founded with a single licensed plotted colony in New Gurugram. All 310 plots sell before the community centre is finished.",
+    year: "2016",
+    title: "Single Plot",
+    copy: "Ameva begins with one plot in Sonipat — the first foundation of everything that followed.",
   },
   {
-    year: "2011",
-    title: "Construction brought in-house",
-    copy: "After a subcontractor walks off a site mid-slab, we build our own construction division. It has poured every slab since.",
-  },
-  {
-    year: "2015",
-    title: "First high-rise",
-    copy: "Nova Residences proves that a single-tower, three-homes-per-floor format can work commercially in Sector 65.",
+    year: "2017",
+    title: "We Build",
+    copy: "We start constructing in-house, taking full ownership of quality from foundation to finish.",
   },
   {
     year: "2019",
-    title: "The delay penalty clause",
-    copy: "We add a buyer-payable penalty to every booking form, three years before it becomes common practice in the region.",
+    title: "Expansion of team and area of construction",
+    copy: "More of the team and more area of construction — we scale up to take on larger sites.",
   },
   {
-    year: "2022",
-    title: "Commercial vertical launched",
-    copy: "Quorum opens the Grade-A office portfolio on Golf Course Extension Road, leasing 60% of its floor plate pre-completion.",
+    year: "2021",
+    title: "Expansion of team and area of construction",
+    copy: "The team keeps growing and so does the area under construction, taking on larger sites across the region.",
   },
   {
-    year: "2025",
-    title: "Six million square feet",
-    copy: "The portfolio crosses 6.4M sq. ft. delivered across 42 projects, with 2,100 families now living in an Ameva address.",
+    year: "2023",
+    title: "Commercial projects",
+    copy: "Construction of commercial projects begins, widening the portfolio beyond residences.",
+  },
+  {
+    year: "2026",
+    title: "1.4M sq. ft. · 17 projects",
+    copy: "1.4M sq. ft. delivered across 17 projects, with 119 families.",
   },
 ];
 

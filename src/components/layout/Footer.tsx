@@ -23,23 +23,22 @@ export function Footer() {
           <div className="lg:col-span-4">
             <Reveal>
               <Link href="/" className="flex items-center gap-3">
-                <span className="relative size-12 overflow-hidden rounded-lg ring-1 ring-cream-100/15">
-                  <Image src="/logo.jpeg" alt="" fill sizes="48px" className="object-cover" />
+                <span className="relative size-20 overflow-hidden rounded-lg ring-1 ring-cream-100/15">
+                  <Image src="/logo.jpeg" alt="" fill sizes="80px" className="object-cover" />
                 </span>
                 <span className="flex flex-col leading-none">
-                  <span className="font-display text-2xl tracking-tight text-cream-100">
+                  <span className="font-display text-4xl font-extrabold tracking-tight text-cream-100">
                     Ameva
                   </span>
-                  <span className="mt-1 text-[0.55rem] font-medium tracking-[0.34em] text-steel-400">
+                  <span className="mt-2 text-sm font-bold tracking-[0.24em] text-steel-300">
                     INFRASTRUCTURE
                   </span>
                 </span>
               </Link>
 
               <p className="mt-6 max-w-sm text-sm leading-relaxed text-cream-100/55">
-                Eighteen years of building in Delhi NCR — residences, independent
-                floors and commercial landmarks, handed over on the date we
-                promised.
+                Over ten years of building in Delhi NCR — 17 projects, 1.4M sq. ft.
+                and 119 happy families.
               </p>
 
               <div className="mt-7 flex flex-wrap gap-2">
@@ -114,7 +113,7 @@ export function Footer() {
                 </li>
                 <li className="flex gap-3">
                   <Phone className="size-4 shrink-0 text-steel-400" strokeWidth={1.5} />
-                  <a href={`tel:${site.phoneHref}`} className="hover:text-cream-100">
+                  <a href={`tel:${site.phoneHref}`} className="text-lg font-bold text-cream-100 hover:text-steel-300">
                     {site.phone}
                   </a>
                 </li>
@@ -142,7 +141,6 @@ export function Footer() {
           <p>
             © {year} {site.name}. All rights reserved.
           </p>
-          <p className="tracking-wide">{site.rera}</p>
           <div className="flex gap-6">
             <Link href="/privacy" className="transition-colors hover:text-cream-100/70">
               Privacy Policy

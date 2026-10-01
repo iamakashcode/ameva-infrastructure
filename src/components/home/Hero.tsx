@@ -19,9 +19,11 @@ import { Magnetic } from "@/components/ui/MagneticButton";
 const SLIDE_MS = 5000;
 
 const quickStats = [
-  { k: "18+", v: "Years Building" },
-  { k: "42", v: "Projects Delivered" },
-  { k: "6.4M", v: "Sq. Ft. Developed" },
+  { k: "1.4M", v: "Sq. Ft. Delivered" },
+  { k: "17", v: "Projects Delivered" },
+  { k: "10+", v: "Years of Building" },
+  { k: "52", v: "In-house Team" },
+  { k: "119", v: "Happy Families" },
 ];
 
 /** Headline lines rise out of their own mask, one after another. */
@@ -114,7 +116,7 @@ export function Hero() {
                 <span className="relative inline-flex size-1.5 rounded-full bg-steel-600" />
               </span>
               <span className="eyebrow text-navy-900/62">
-                Gurugram · Delhi NCR · Since 2007
+                Sonipat · Delhi NCR · Since 2016
               </span>
             </motion.div>
 
@@ -359,13 +361,13 @@ export function Hero() {
           transition={{ delay: 1.15, duration: 0.8, ease: EASE }}
           className="mt-10 flex items-end justify-between gap-6 border-t border-navy-900/12 pt-6 lg:mt-12"
         >
-          <ul className="flex flex-wrap gap-8 sm:gap-14">
+          <ul className="flex flex-wrap gap-x-8 gap-y-5 sm:gap-x-10">
             {quickStats.map((s) => (
               <li key={s.v}>
-                <p className="font-display text-2xl text-navy-900 sm:text-3xl">
+                <p className="font-display text-3xl font-extrabold text-navy-900 sm:text-4xl">
                   {s.k}
                 </p>
-                <p className="mt-1 text-[0.68rem] tracking-wide text-navy-900/50">
+                <p className="mt-1 text-xs font-semibold tracking-wide text-navy-900/75">
                   {s.v}
                 </p>
               </li>

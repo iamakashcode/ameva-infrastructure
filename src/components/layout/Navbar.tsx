@@ -62,21 +62,21 @@ export function Navbar() {
       >
         <nav className="container-x flex items-center justify-between gap-6">
           <Link href="/" className="group flex items-center gap-3" aria-label={site.name}>
-            <span className={`relative size-10 overflow-hidden rounded-lg ring-1 transition-transform duration-500 group-hover:scale-105 sm:size-11 ${inverted ? "ring-navy-900/12" : "ring-cream-100/15"}`}>
+            <span className={`relative size-14 overflow-hidden rounded-lg ring-1 transition-transform duration-500 group-hover:scale-105 sm:size-16 ${inverted ? "ring-navy-900/12" : "ring-cream-100/15"}`}>
               <Image
                 src="/logo.jpeg"
                 alt=""
                 fill
-                sizes="44px"
+                sizes="64px"
                 className="object-cover"
                 priority
               />
             </span>
             <span className="flex flex-col leading-none">
-              <span className={`font-display text-xl tracking-tight transition-colors duration-500 sm:text-[1.35rem] ${ink}`}>
+              <span className={`font-display text-2xl font-extrabold tracking-tight transition-colors duration-500 sm:text-[1.9rem] ${ink}`}>
                 Ameva
               </span>
-              <span className={`mt-1 text-[0.5rem] font-medium tracking-[0.34em] transition-colors duration-500 sm:text-[0.55rem] ${inverted ? "text-steel-600" : "text-steel-300"}`}>
+              <span className={`mt-1.5 text-[0.62rem] font-bold tracking-[0.26em] transition-colors duration-500 sm:text-[0.74rem] ${inverted ? "text-steel-700" : "text-steel-200"}`}>
                 INFRASTRUCTURE
               </span>
             </span>
@@ -110,9 +110,9 @@ export function Navbar() {
           <div className="flex items-center gap-3">
             <a
               href={`tel:${site.phoneHref}`}
-              className={`hidden items-center gap-2 text-sm transition-colors xl:flex ${inkMuted} ${inverted ? "hover:text-navy-900" : "hover:text-cream-100"}`}
+              className={`hidden items-center gap-2 text-base font-bold transition-colors lg:flex ${ink}`}
             >
-              <Phone className="size-3.5" strokeWidth={1.75} />
+              <Phone className="size-4" strokeWidth={2} />
               {site.phone}
             </a>
 

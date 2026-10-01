@@ -14,7 +14,7 @@ import { Team } from "@/components/about/Team";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Ameva Infrastructure has built 42 projects and 6.4 million sq. ft. across Delhi NCR since 2007 — with an in-house construction team and a published delay-penalty commitment.",
+    "Ameva Infrastructure has delivered 17 projects and 1.4 million sq. ft. since 2016 — with a 52-strong in-house team and 119 happy families.",
 };
 
 const values = [
@@ -31,7 +31,7 @@ const values = [
   {
     icon: Compass,
     title: "Location before land price",
-    copy: "We have walked away from cheap parcels for eighteen years. Every site we buy is within ten minutes of an arterial road and a working school.",
+    copy: "We have walked away from cheap parcels for ten years. Every site we buy is within ten minutes of an arterial road and a working school.",
   },
   {
     icon: Leaf,
@@ -45,8 +45,8 @@ export default function AboutPage() {
     <>
       <PageHero
         eyebrow="About Ameva"
-        title="Eighteen years of *quietly* getting it right."
-        copy="We are a Gurugram developer with an in-house construction arm, a published specification and a habit of handing over on the date we promised."
+        title="Ten years of *steadily* building it right."
+        copy="We are a Sonipat developer with an in-house construction arm, a published specification and a habit of handing over on the date we promised."
         image="https://images.unsplash.com/photo-1470723710355-95304d8aece4?auto=format&fit=crop&w=2000&q=80"
         crumbs={[{ label: "About Us" }]}
       />
@@ -81,7 +81,7 @@ export default function AboutPage() {
             </Reveal>
             <Reveal delay={0.22}>
               <p>
-                Today the in-house construction division runs to 340 people —
+                Today the in-house construction division runs to 52 people and is still expanding —
                 engineers, supervisors, finishing crews and a quality cell that
                 reports to the board rather than to the project manager. It is
                 slower to scale than the alternative and it is the single reason
@@ -101,9 +101,9 @@ export default function AboutPage() {
             <Reveal delay={0.36}>
               <div className="grid gap-4 pt-4 sm:grid-cols-3">
                 {[
-                  { k: "340", v: "In-house build team" },
-                  { k: "0", v: "Buyer litigations" },
-                  { k: "5 yr", v: "Structural warranty" },
+                  { k: "52", v: "In-house team — still expanding" },
+                  { k: "17", v: "Projects delivered" },
+                  { k: "119", v: "Happy families" },
                 ].map((s) => (
                   <div key={s.v} className="rounded-xl border border-navy-900/10 bg-white p-5 shadow-sm shadow-navy-900/5">
                     <p className="font-display text-3xl text-navy-900">{s.k}</p>
@@ -177,8 +177,8 @@ export default function AboutPage() {
       <section className="border-t border-navy-900/10 py-24 lg:py-32">
         <div className="container-x">
           <SectionHeading
-            eyebrow="Milestones"
-            title="Eighteen years, *six* turning points."
+            eyebrow="Company Journey"
+            title="Our journey, *2016 to 2026*."
           />
           <div className="mt-16">
             <Timeline />

@@ -12,7 +12,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Talk to Ameva Infrastructure about residences, independent floors, villas and commercial space in Gurugram. Call, WhatsApp, or book a site visit.",
+    "Talk to Ameva Infrastructure about residences, independent floors, villas and commercial space in Sonipat, Delhi NCR. Call, WhatsApp, or book a site visit.",
 };
 
 const channels = [
@@ -179,15 +179,15 @@ export default function ContactPage() {
         <div className="container-x">
           <SectionHeading
             eyebrow="Find Us"
-            title="Golf Course Extension Road, *Sector 65.*"
-            copy="Twelve minutes from Rapid Metro Sector 55–56, with visitor parking in the basement."
+            title="Jindal Global City, *Sector 35.*"
+            copy="B-205, Jindal Global City, Sector 35, Sonipat — visitor parking available."
           />
 
           <Reveal delay={0.2}>
             <div className="relative mt-12 aspect-16/10 overflow-hidden rounded-2xl border border-navy-900/10 bg-navy-900 sm:aspect-21/9">
               <iframe
                 title="Ameva Infrastructure office location"
-                src="https://www.openstreetmap.org/export/embed.html?bbox=77.0530,28.3830,77.0930,28.4090&layer=mapnik&marker=28.3960,77.0730"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=76.9990,28.9740,77.0390,29.0140&layer=mapnik&marker=28.9940,77.0190"
                 loading="lazy"
                 className="size-full [filter:invert(0.92)_hue-rotate(180deg)_saturate(0.55)_contrast(0.92)]"
               />
@@ -205,7 +205,7 @@ export default function ContactPage() {
                   {site.address.city}
                 </p>
                 <a
-                  href="https://www.google.com/maps/search/?api=1&query=28.3960,77.0730"
+                  href="https://www.google.com/maps/search/?api=1&query=B-205+Jindal+Global+City+Sector+35+Sonipat"
                   target="_blank"
                   rel="noreferrer noopener"
                   className="pointer-events-auto mt-4 inline-flex items-center gap-2 rounded-full bg-steel-400 px-4 py-2 text-xs font-medium text-navy-950 transition-colors hover:bg-cream-100"

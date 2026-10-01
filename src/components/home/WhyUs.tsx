@@ -26,7 +26,7 @@ const pillars = [
   {
     icon: CalendarCheck,
     title: "Handover on the Date",
-    copy: "Every booking form carries a delay penalty payable to you. In eighteen years we have paid it twice — and disclosed both publicly.",
+    copy: "Every booking form carries a delay penalty payable to you. Over ten years, we have disclosed every delay publicly.",
     image:
       "https://images.unsplash.com/photo-1470723710355-95304d8aece4?auto=format&fit=crop&w=1200&q=80",
   },

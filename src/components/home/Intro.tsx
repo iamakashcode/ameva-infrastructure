@@ -89,8 +89,8 @@ export function Intro() {
           <Reveal delay={0.25}>
             <div className="mt-7 space-y-5 text-[0.975rem] leading-relaxed text-navy-900/62">
               <p>
-                Ameva Infrastructure started in 2007 with a single plotted colony
-                in New Gurugram and a fairly unglamorous conviction: that most
+                Ameva Infrastructure started in 2016 with a single plot
+                in Sonipat and a fairly unglamorous conviction: that most
                 disputes in Indian real estate come down to a gap between what
                 was shown and what was built.
               </p>
@@ -98,7 +98,7 @@ export function Intro() {
                 So we closed the gap. Our construction arm is in-house, our
                 material specifications are attached to the agreement, and every
                 booking carries a delay penalty that costs us money if we slip.
-                Eighteen years and forty-two projects later, we have never been
+                Ten years and seventeen projects later, we have never been
                 to court with a buyer.
               </p>
             </div>

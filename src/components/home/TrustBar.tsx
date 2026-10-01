@@ -6,7 +6,7 @@ const items = [
   "42 Projects Delivered",
   "On-Time Handover Guarantee",
   "ISO 9001:2015",
-  "2,100+ Families Housed",
+  "119 Families Housed",
   "In-House Construction Arm",
   "Zero Litigation Record",
 ];

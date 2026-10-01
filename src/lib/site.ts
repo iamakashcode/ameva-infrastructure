@@ -7,16 +7,15 @@ export const site = {
   url: "https://amevainfrastructure.com",
   email: "connect@amevainfrastructure.com",
   salesEmail: "sales@amevainfrastructure.com",
-  phone: "+91 98110 45600",
-  phoneHref: "+919811045600",
-  whatsapp: "919811045600",
+  phone: "8906322222",
+  phoneHref: "+918906322222",
+  whatsapp: "918906322222",
   address: {
-    line1: "Ameva House, Tower B, 9th Floor",
-    line2: "Golf Course Extension Road, Sector 65",
-    city: "Gurugram, Haryana 122102",
+    line1: "B-205, Jindal Global City",
+    line2: "Sector 35",
+    city: "Sonipat, Haryana",
   },
   hours: "Mon – Sat · 10:00 AM to 7:00 PM",
-  rera: "RERA Reg. No. HRERA-GGM-2019-ABC-4471",
   socials: [
     { label: "Instagram", href: "https://instagram.com" },
     { label: "LinkedIn", href: "https://linkedin.com" },
@@ -34,8 +33,9 @@ export const navLinks = [
 ] as const;
 
 export const stats = [
-  { value: 18, suffix: "+", label: "Years of Building" },
-  { value: 42, suffix: "", label: "Projects Delivered" },
-  { value: 6.4, suffix: "M", label: "Sq. Ft. Developed" },
-  { value: 2100, suffix: "+", label: "Happy Families" },
+  { value: 1.4, suffix: "M", label: "Sq. Ft. Delivered" },
+  { value: 17, suffix: "", label: "Projects Delivered" },
+  { value: 10, suffix: "+", label: "Years of Building" },
+  { value: 52, suffix: "", label: "In-house Team — still expanding" },
+  { value: 119, suffix: "", label: "Happy Families" },
 ] as const;

@@ -32,7 +32,7 @@ const sections: LegalSection[] = [
   {
     heading: "RERA disclosure",
     body: [
-      `All projects marketed by ${site.name} are registered with the Haryana Real Estate Regulatory Authority where registration is applicable. ${site.rera}.`,
+      `All projects marketed by ${site.name} are registered with the Haryana Real Estate Regulatory Authority where registration is applicable.`,
       "Registration numbers, sanctioned plans, approvals and quarterly progress updates for each project are available on the HRERA portal and on request from our sales office. We encourage every buyer to verify them independently before making a payment.",
     ],
   },

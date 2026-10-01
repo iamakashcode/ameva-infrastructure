@@ -29,14 +29,14 @@ export function StatsBand() {
       <div aria-hidden className="absolute inset-0 -z-10 bg-navy-950/88" />
 
       <div className="container-x py-20 lg:py-24">
-        <RevealGroup className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        <RevealGroup className="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
           {stats.map((s) => (
             <RevealItem key={s.label}>
-              <div className="border-l border-cream-100/15 pl-6">
-                <p className="font-display text-5xl leading-none text-cream-100 lg:text-6xl">
+              <div className="border-l-2 border-steel-400 pl-6">
+                <p className="font-display text-5xl font-extrabold leading-none text-cream-100 lg:text-6xl">
                   <Counter value={s.value} suffix={s.suffix} />
                 </p>
-                <p className="mt-3 text-[0.7rem] tracking-[0.18em] text-cream-100/50 uppercase">
+                <p className="mt-3 text-sm font-semibold tracking-wide text-cream-100/85">
                   {s.label}
                 </p>
               </div>
