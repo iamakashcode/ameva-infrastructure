@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { useMemo, useState } from "react";
 import { EASE } from "@/lib/motion";
 import { categories, projects } from "@/lib/projects";
-import { ProjectCard } from "@/components/ui/ProjectCard";
+import { MoreProjectsCard, ProjectCard } from "@/components/ui/ProjectCard";
 
 export function ProjectsGrid() {
   const [active, setActive] = useState<(typeof categories)[number]>("All");
@@ -23,7 +23,7 @@ export function ProjectsGrid() {
   return (
     <div>
       {/* Filter rail */}
-      <div className="flex flex-wrap items-center justify-between gap-6 border-b border-navy-900/10 pb-6">
+      <div className="flex flex-wrap items-center justify-between gap-6 border-b border-navy-900/10 pb-4">
         <div className="flex flex-wrap gap-2">
           {categories.map((c) => {
             const isActive = active === c;
@@ -31,7 +31,7 @@ export function ProjectsGrid() {
               <button
                 key={c}
                 onClick={() => setActive(c)}
-                className={`relative rounded-full px-5 py-2.5 text-sm transition-colors duration-300 ${
+                className={`relative rounded-full px-4 py-2 text-sm font-semibold transition-colors duration-300 ${
                   isActive
                     ? "text-cream-50"
                     : "text-navy-900/62 hover:text-navy-900"
@@ -65,7 +65,7 @@ export function ProjectsGrid() {
       </div>
 
       {/* Grid */}
-      <motion.div layout className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <motion.div layout className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
         <AnimatePresence mode="popLayout">
           {filtered.map((p, i) => (
             <motion.div
@@ -80,10 +80,11 @@ export function ProjectsGrid() {
             </motion.div>
           ))}
         </AnimatePresence>
+        {(active === "All" || active === "Residential") && <MoreProjectsCard />}
       </motion.div>
 
       {filtered.length === 0 && (
-        <p className="py-20 text-center text-navy-900/52">
+        <p className="py-10 text-center text-navy-900/52">
           Nothing in this category just yet — check back shortly.
         </p>
       )}

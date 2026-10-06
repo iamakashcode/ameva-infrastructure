@@ -51,7 +51,7 @@ export function ProjectJsonLd({ slug }: { slug: string }) {
     name: p.name,
     description: p.tagline,
     url: `${site.url}/projects/${p.slug}`,
-    image: [p.cover, ...p.gallery],
+    image: [`${site.url}${p.cover}`],
     address: {
       "@type": "PostalAddress",
       streetAddress: p.location,

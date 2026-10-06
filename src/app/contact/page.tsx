@@ -65,7 +65,7 @@ export default function ContactPage() {
         eyebrow="Contact Us"
         title="Start with a *twenty-minute* phone call."
         copy="Tell us the budget and the timeline. If nothing in our portfolio fits, we will say so on the first call rather than the fourth."
-        image="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=2000&q=80"
+        image="/projects/ameva-head-office.jpeg"
         crumbs={[{ label: "Contact Us" }]}
       />
 

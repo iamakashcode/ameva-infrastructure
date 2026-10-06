@@ -22,7 +22,7 @@ export function CtaBand() {
     <section ref={ref} className="relative overflow-hidden">
       <motion.div style={{ y }} className="absolute inset-0 -z-20 scale-125">
         <Image
-          src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=2000&q=80"
+          src="/projects/ameva-head-office.jpeg"
           alt=""
           fill
           sizes="100vw"

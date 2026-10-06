@@ -38,7 +38,7 @@ export default function ProjectsPage() {
         eyebrow="Our Portfolio"
         title="Forty-two delivered. *Eight* currently selling."
         copy="Filter by vertical to see live availability, starting prices and possession timelines across every Ameva development in Delhi NCR."
-        image="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=2000&q=80"
+        image="/projects/bptp-gurgaon.jpeg"
         crumbs={[{ label: "Projects" }]}
       />
 

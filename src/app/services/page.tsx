@@ -21,7 +21,7 @@ const services: Service[] = [
     copy: "High-rise towers, boutique buildings and independent floors — planned around light, cross-ventilation and layouts that still work when the family grows.",
     points: ["Master planning", "Unit design", "IGBC-rated builds"],
     image:
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80",
+      "/projects/eldeco-sonipat.jpeg",
   },
   {
     n: "02",
@@ -29,7 +29,7 @@ const services: Service[] = [
     copy: "Grade-A offices and open-air retail high streets built to occupier specification, with column-free plates and services that can be split or merged.",
     points: ["Office towers", "Retail high streets", "Built-to-suit"],
     image:
-      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80",
+      "/projects/bptp-gurgaon.jpeg",
   },
   {
     n: "03",
@@ -37,7 +37,7 @@ const services: Service[] = [
     copy: "Licensed colonies where roads, sewerage, power and the community centre are finished and handed to the RWA before the first plot changes hands.",
     points: ["DTCP licensing", "Full infrastructure", "Approved floor plans"],
     image:
-      "https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=1200&q=80",
+      "/projects/rangoli-green-sonipat.jpeg",
   },
   {
     n: "04",
@@ -45,7 +45,7 @@ const services: Service[] = [
     copy: "A fixed-price interior package delivered by the same team that built the shell — so nobody drills into a beam that was not meant to be drilled.",
     points: ["Fixed-price scope", "90-day delivery", "5-year warranty"],
     image:
-      "https://images.unsplash.com/photo-1505873242700-f289a29e1e0f?auto=format&fit=crop&w=1200&q=80",
+      "/projects/dlf-gurgaon.jpeg",
   },
   {
     n: "05",
@@ -53,7 +53,7 @@ const services: Service[] = [
     copy: "Our maintenance team stays on the property after the last unit sells, running the plant rooms, lifts and landscaping under an RWA-approved contract.",
     points: ["Plant operations", "Landscaping", "Security & access"],
     image:
-      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1200&q=80",
+      "/projects/sector-46-gurgaon.jpeg",
   },
   {
     n: "06",
@@ -61,7 +61,7 @@ const services: Service[] = [
     copy: "For landowners holding parcels in NCR — we take the approvals, construction and sales risk, and you take a share of the developed area or revenue.",
     points: ["Land aggregation", "Revenue or area share", "Full approvals"],
     image:
-      "https://images.unsplash.com/photo-1470723710355-95304d8aece4?auto=format&fit=crop&w=1200&q=80",
+      "/projects/gk1-new-delhi.jpeg",
   },
 ];
 
@@ -95,7 +95,7 @@ export default function ServicesPage() {
         eyebrow="What We Do"
         title="Six things, done *properly.*"
         copy="Ameva is a developer rather than a marketplace. Everything below is executed by people on our payroll, from land aggregation through to the fifth year of maintenance."
-        image="https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?auto=format&fit=crop&w=2000&q=80"
+        image="/projects/ameva-head-office.jpeg"
         crumbs={[{ label: "Services" }]}
       />
 

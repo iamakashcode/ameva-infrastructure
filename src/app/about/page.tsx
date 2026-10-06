@@ -47,7 +47,7 @@ export default function AboutPage() {
         eyebrow="About Ameva"
         title="Ten years of *steadily* building it right."
         copy="We are a Sonipat developer with an in-house construction arm, a published specification and a habit of handing over on the date we promised."
-        image="https://images.unsplash.com/photo-1470723710355-95304d8aece4?auto=format&fit=crop&w=2000&q=80"
+        image="/projects/ameva-head-office.jpeg"
         crumbs={[{ label: "About Us" }]}
       />
 
@@ -123,7 +123,7 @@ export default function AboutPage() {
         <Reveal>
           <div className="relative aspect-16/9 overflow-hidden rounded-3xl lg:aspect-21/9">
             <Image
-              src="https://images.unsplash.com/photo-1431576901776-e539bd916ba2?auto=format&fit=crop&w=2200&q=80"
+              src="/projects/bptp-gurgaon.jpeg"
               alt="An Ameva Infrastructure development under construction"
               fill
               sizes="100vw"

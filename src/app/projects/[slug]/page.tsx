@@ -11,7 +11,6 @@ import { AnimatedText } from "@/components/ui/AnimatedText";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
 import { ProjectCard } from "@/components/ui/ProjectCard";
-import { Gallery } from "@/components/projects/Gallery";
 import { ProjectJsonLd } from "@/components/seo/JsonLd";
 import { Magnetic } from "@/components/ui/MagneticButton";
 
@@ -28,7 +27,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 
   return {
     title: project.name,
-    description: `${project.tagline} — ${project.configuration} at ${project.location}, ${project.city}. Starting ${project.priceFrom}.`,
+    description: `${project.tagline} — ${project.configuration} at ${project.location}, ${project.city}. `,
     openGraph: {
       title: `${project.name} · ${site.name}`,
       description: project.tagline,
@@ -42,13 +41,13 @@ export default async function ProjectDetailPage({ params }: Params) {
   const project = getProject(slug);
   if (!project) notFound();
 
-  const others = projects.filter((p) => p.slug !== project.slug).slice(0, 3);
+  const others = projects.filter((p) => p.slug !== project.slug).slice(0, 4);
 
   const facts = [
-    { label: "Starting Price", value: project.priceFrom },
-    { label: "Configuration", value: project.configuration },
-    { label: "Carpet / Plot Area", value: project.area },
-    { label: "Possession", value: project.possession },
+    { label: "Status", value: project.status },
+    { label: "Type", value: project.category },
+    { label: "City", value: project.city },
+    { label: "Built by", value: "Ameva In-house Team" },
   ];
 
   return (
@@ -56,7 +55,7 @@ export default async function ProjectDetailPage({ params }: Params) {
       <ProjectJsonLd slug={project.slug} />
 
       {/* Hero */}
-      <section className="relative flex min-h-[80svh] items-end overflow-hidden pt-32 pb-14 lg:pb-20">
+      <section className="relative flex min-h-[60svh] items-end overflow-hidden pt-28 pb-8 lg:pb-10">
         <Image
           src={project.cover}
           alt={project.name}
@@ -139,8 +138,8 @@ export default async function ProjectDetailPage({ params }: Params) {
       </section>
 
       {/* Overview + highlights */}
-      <section className="py-24 lg:py-28">
-        <div className="container-x grid gap-14 lg:grid-cols-12 lg:gap-16">
+      <section className="py-10 lg:py-12">
+        <div className="container-x grid gap-8 lg:grid-cols-12 lg:gap-10">
           <div className="lg:col-span-7">
             <Reveal>
               <span className="eyebrow flex items-center gap-3 text-steel-600">
@@ -150,12 +149,12 @@ export default async function ProjectDetailPage({ params }: Params) {
             </Reveal>
 
             <AnimatedText
-              text="What makes this one *different.*"
+              text="About this *project.*"
               delay={0.1}
-              className="mt-5 text-4xl leading-[1.06] text-navy-900 sm:text-[2.75rem]"
+              className="mt-3 text-3xl leading-[1.06] text-navy-900 sm:text-4xl"
             />
 
-            <div className="mt-7 space-y-5 text-[0.975rem] leading-relaxed text-navy-900/64">
+            <div className="mt-4 space-y-3 text-[0.975rem] leading-relaxed text-navy-900/64">
               {project.overview.map((p, i) => (
                 <Reveal key={i} delay={0.18 + i * 0.07}>
                   <p>{p}</p>
@@ -163,26 +162,14 @@ export default async function ProjectDetailPage({ params }: Params) {
               ))}
             </div>
 
-            <Reveal delay={0.35}>
-              <div className="mt-10 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-navy-900/10 bg-navy-900/10 sm:grid-cols-4">
-                {project.specs.map((s) => (
-                  <div key={s.label} className="bg-cream-50 p-5">
-                    <p className="text-[0.6rem] tracking-[0.16em] text-navy-900/45 uppercase">
-                      {s.label}
-                    </p>
-                    <p className="mt-2 font-display text-xl text-navy-900">{s.value}</p>
-                  </div>
-                ))}
-              </div>
-            </Reveal>
           </div>
 
           {/* Highlights + enquiry */}
           <div className="lg:col-span-5">
             <Reveal delay={0.15}>
-              <div className="rounded-2xl border border-navy-900/10 bg-white p-7 shadow-sm shadow-navy-900/5 lg:p-9">
+              <div className="rounded-2xl border border-navy-900/10 bg-white p-5 shadow-sm shadow-navy-900/5 lg:p-6">
                 <h3 className="text-2xl text-navy-900">Project Highlights</h3>
-                <ul className="mt-6 space-y-4">
+                <ul className="mt-4 space-y-3">
                   {project.highlights.map((h) => (
                     <li key={h} className="flex gap-3 text-sm leading-relaxed text-navy-900/70">
                       <span className="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-steel-600/12 text-steel-600">
@@ -193,7 +180,7 @@ export default async function ProjectDetailPage({ params }: Params) {
                   ))}
                 </ul>
 
-                <div className="mt-8 border-t border-navy-900/10 pt-7">
+                <div className="mt-5 border-t border-navy-900/10 pt-5">
                   <p className="text-sm leading-relaxed text-navy-900/62">
                     Want the full cost sheet and floor plates for {project.name}?
                     We will send them across the same day.
@@ -223,40 +210,9 @@ export default async function ProjectDetailPage({ params }: Params) {
         </div>
       </section>
 
-      {/* Gallery */}
-      <section className="border-t border-navy-900/10 py-24 lg:py-28">
-        <div className="container-x">
-          <SectionHeading eyebrow="Gallery" title="A closer *look.*" />
-          <div className="mt-12">
-            <Gallery images={project.gallery} name={project.name} />
-          </div>
-        </div>
-      </section>
-
-      {/* Amenities */}
-      <section className="border-t border-navy-900/10 py-24 lg:py-28">
-        <div className="container-x">
-          <SectionHeading
-            eyebrow="Amenities"
-            title="Everything included, *nothing* upsold."
-            copy="Each of these is part of the base price and written into your agreement — none of it appears later as a separate charge."
-          />
-
-          <RevealGroup className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-4">
-            {project.amenities.map((a) => (
-              <RevealItem key={a}>
-                <div className="group flex h-full items-center gap-3 rounded-xl border border-navy-900/10 bg-white px-5 py-5 shadow-sm shadow-navy-900/5 transition-all duration-500 hover:border-steel-600/40 hover:bg-cream-100 hover:shadow-lg hover:shadow-navy-900/8">
-                  <span className="size-1.5 shrink-0 rotate-45 bg-steel-600 transition-transform duration-500 group-hover:rotate-[135deg]" />
-                  <span className="text-sm text-navy-900/80">{a}</span>
-                </div>
-              </RevealItem>
-            ))}
-          </RevealGroup>
-        </div>
-      </section>
 
       {/* Other projects */}
-      <section className="border-t border-navy-900/10 py-24 lg:py-28">
+      <section className="border-t border-navy-900/10 py-10 lg:py-12">
         <div className="container-x">
           <div className="flex flex-wrap items-end justify-between gap-8">
             <SectionHeading eyebrow="Keep Looking" title="Other Ameva *addresses.*" />
@@ -267,7 +223,7 @@ export default async function ProjectDetailPage({ params }: Params) {
             </Reveal>
           </div>
 
-          <RevealGroup className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <RevealGroup className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
             {others.map((p) => (
               <RevealItem key={p.slug}>
                 <ProjectCard project={p} />

@@ -277,10 +277,10 @@ export function Hero() {
                   <div className="mt-4 flex items-end justify-between border-t border-cream-100/20 pt-4">
                     <div>
                       <p className="text-[0.58rem] tracking-[0.18em] text-cream-100/50 uppercase">
-                        Starting
+                        Status
                       </p>
                       <p className="mt-1 font-display text-xl text-cream-100">
-                        {project.priceFrom}
+                        {project.status}
                       </p>
                     </div>
                     <span className="grid size-10 place-items-center rounded-full border border-cream-100/30 text-cream-100 transition-colors duration-500 group-hover:border-steel-400 group-hover:bg-steel-400 group-hover:text-navy-950">
@@ -343,7 +343,7 @@ export function Hero() {
                   href="/projects"
                   className="group flex items-center gap-1.5 text-[0.72rem] tracking-wide text-navy-900/55 transition-colors hover:text-steel-600"
                 >
-                  All 8 projects
+                  All projects
                   <ArrowUpRight
                     className="size-3.5 transition-transform duration-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                     strokeWidth={1.75}

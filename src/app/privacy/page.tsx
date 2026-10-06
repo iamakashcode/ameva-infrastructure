@@ -67,7 +67,7 @@ export default function PrivacyPage() {
       crumb="Privacy Policy"
       updated="18 August 2026"
       intro="A short, readable account of what we do with the information you share through this website — and, more usefully, what we do not do with it."
-      image="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=2000&q=80"
+      image="/projects/bptp-gurgaon.jpeg"
       sections={sections}
     />
   );

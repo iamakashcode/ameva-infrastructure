@@ -19,7 +19,7 @@ export function StatsBand() {
     <section ref={ref} className="relative overflow-hidden">
       <motion.div style={{ y }} className="absolute inset-0 -z-20 scale-125">
         <Image
-          src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=2000&q=80"
+          src="/projects/bptp-gurgaon.jpeg"
           alt=""
           fill
           sizes="100vw"

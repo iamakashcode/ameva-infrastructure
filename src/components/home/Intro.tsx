@@ -35,7 +35,7 @@ export function Intro() {
             className="relative aspect-4/5 overflow-hidden rounded-2xl sm:aspect-3/4"
           >
             <Image
-              src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=80"
+              src="/projects/eldeco-sonipat.jpeg"
               alt="Interior of an Ameva residence"
               fill
               sizes="(min-width: 1024px) 45vw, 90vw"
@@ -49,7 +49,7 @@ export function Intro() {
           >
             <div className="relative aspect-square">
               <Image
-                src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=900&q=80"
+                src="/projects/rangoli-green-sonipat.jpeg"
                 alt="Ameva villa exterior"
                 fill
                 sizes="(min-width: 1024px) 22vw, 45vw"

@@ -72,7 +72,7 @@ export default function TermsPage() {
       crumb="Terms of Use"
       updated="18 August 2026"
       intro="The rules that govern this website, and — more importantly — the status of the prices, renders and project details you see on it."
-      image="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=2000&q=80"
+      image="/projects/bptp-gurgaon.jpeg"
       sections={sections}
     />
   );

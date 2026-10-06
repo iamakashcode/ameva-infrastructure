@@ -14,28 +14,28 @@ const pillars = [
     title: "Design That Ages Well",
     copy: "We plan for the twentieth year, not the launch weekend — deep balconies, cross-ventilation, and material choices that look better weathered.",
     image:
-      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1200&q=80",
+      "/projects/sector-46-gurgaon.jpeg",
   },
   {
     icon: HardHat,
     title: "In-House Construction",
-    copy: "Our own site teams pour every slab. Nothing is handed to a labour contractor, which is why our finishes are consistent across forty-two projects.",
+    copy: "Our own site teams pour every slab. Nothing is handed to a labour contractor, which is why our finishes are consistent across seventeen projects.",
     image:
-      "https://images.unsplash.com/photo-1431576901776-e539bd916ba2?auto=format&fit=crop&w=1200&q=80",
+      "/projects/gk1-new-delhi.jpeg",
   },
   {
     icon: CalendarCheck,
     title: "Handover on the Date",
     copy: "Every booking form carries a delay penalty payable to you. Over ten years, we have disclosed every delay publicly.",
     image:
-      "https://images.unsplash.com/photo-1470723710355-95304d8aece4?auto=format&fit=crop&w=1200&q=80",
+      "/projects/jindal-global-city-sonipat.jpeg",
   },
   {
     icon: ShieldCheck,
     title: "Titles You Can Verify",
     copy: "RERA registration, DTCP licence and encumbrance certificates are shared before booking — not after the cheque clears.",
     image:
-      "https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?auto=format&fit=crop&w=1200&q=80",
+      "/projects/dlf-gurgaon.jpeg",
   },
 ];
 
