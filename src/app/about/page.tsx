@@ -191,8 +191,8 @@ export default function AboutPage() {
         <div className="container-x">
           <SectionHeading
             eyebrow="Leadership"
-            title="The four people who *sign off* on everything."
-            copy="Small enough that you will meet at least two of them before you book, and all four before you take possession."
+            title="The person who *signs off* on everything."
+            copy="A hands-on founder you can meet before you book."
           />
           <div className="mt-14">
             <Team />

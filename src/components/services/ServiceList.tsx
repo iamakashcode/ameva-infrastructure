@@ -34,13 +34,13 @@ export function ServiceList({ services }: { services: Service[] }) {
 
   return (
     <div className="relative" onMouseMove={onMove}>
-      {/* Floating preview — desktop only */}
+      {/* Images hidden for now — re-enable by restoring `lg:block` here and removing `hidden` on the mobile image below. */}
       <motion.div
         aria-hidden
         style={{ x: sx, y: sy }}
         animate={{ opacity: active !== null ? 1 : 0, scale: active !== null ? 1 : 0.9 }}
         transition={{ duration: 0.4, ease: EASE }}
-        className="pointer-events-none absolute left-0 top-0 z-20 hidden h-60 w-[21rem] overflow-hidden rounded-2xl lg:block"
+        className="pointer-events-none absolute left-0 top-0 z-20 hidden h-60 w-[21rem] overflow-hidden rounded-2xl"
       >
         {services.map((s, i) => (
           <motion.div
@@ -109,7 +109,7 @@ export function ServiceList({ services }: { services: Service[] }) {
             </div>
 
             {/* Mobile image */}
-            <div className="relative -mt-2 mb-8 aspect-16/9 overflow-hidden rounded-xl lg:hidden">
+            <div className="relative -mt-2 mb-8 hidden aspect-16/9 overflow-hidden rounded-xl">
               <Image
                 src={s.image}
                 alt=""

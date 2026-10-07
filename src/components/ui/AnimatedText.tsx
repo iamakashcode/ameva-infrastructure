@@ -66,7 +66,7 @@ export function AnimatedText({
     >
       {words.map(({ word: w, accent: isAccent }, i) => (
         <Fragment key={`${w}-${i}`}>
-          <span className="inline-block overflow-hidden align-bottom pb-[0.12em]">
+          <span className="inline-block overflow-hidden align-bottom pb-[0.12em] pr-[0.2em] -mr-[0.2em] pl-[0.05em] -ml-[0.05em]">
             <motion.span
               variants={word}
               className={isAccent ? `inline-block italic ${accent}` : "inline-block"}

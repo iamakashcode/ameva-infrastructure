@@ -23,8 +23,8 @@ export function Footer() {
           <div className="lg:col-span-4">
             <Reveal>
               <Link href="/" className="flex items-center gap-3">
-                <span className="relative size-20 overflow-hidden rounded-lg ring-1 ring-cream-100/15">
-                  <Image src="/logo.jpeg" alt="" fill sizes="80px" className="object-cover" />
+                <span className="relative size-20 overflow-hidden rounded-lg bg-cream-50/95 p-1">
+                  <Image src="/logo.png" alt="" fill sizes="80px" className="object-contain p-1" />
                 </span>
                 <span className="flex flex-col leading-none">
                   <span className="font-display text-4xl font-extrabold tracking-tight text-cream-100">

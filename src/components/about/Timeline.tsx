@@ -22,8 +22,8 @@ const milestones = [
   },
   {
     year: "2021",
-    title: "Expansion of team and area of construction",
-    copy: "The team keeps growing and so does the area under construction, taking on larger sites across the region.",
+    title: "More Expansion",
+    copy: "The team keeps growing and so does the area under construction.",
   },
   {
     year: "2023",
