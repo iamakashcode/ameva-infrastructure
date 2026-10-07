@@ -11,7 +11,7 @@ export type Service = {
   title: string;
   copy: string;
   points: string[];
-  image: string;
+  image?: string;
 };
 
 /**
@@ -42,7 +42,7 @@ export function ServiceList({ services }: { services: Service[] }) {
         transition={{ duration: 0.4, ease: EASE }}
         className="pointer-events-none absolute left-0 top-0 z-20 hidden h-60 w-[21rem] overflow-hidden rounded-2xl"
       >
-        {services.map((s, i) => (
+        {services.map((s, i) => s.image && (
           <motion.div
             key={s.title}
             animate={{ opacity: active === i ? 1 : 0 }}
@@ -108,18 +108,7 @@ export function ServiceList({ services }: { services: Service[] }) {
               </span>
             </div>
 
-            {/* Mobile image */}
-            <div className="relative -mt-2 mb-8 hidden aspect-16/9 overflow-hidden rounded-xl">
-              <Image
-                src={s.image}
-                alt=""
-                fill
-                sizes="92vw"
-                className="object-cover"
-              />
-              <span className="absolute inset-0 bg-cream-50/25" />
-            </div>
-          </li>
+                      </li>
         ))}
       </ul>
     </div>

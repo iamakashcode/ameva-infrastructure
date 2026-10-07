@@ -20,48 +20,42 @@ const services: Service[] = [
     title: "Residential Development",
     copy: "High-rise towers, boutique buildings and independent floors — planned around light, cross-ventilation and layouts that still work when the family grows.",
     points: ["Master planning", "Unit design", "IGBC-rated builds"],
-    image:
-      "/projects/eldeco-sonipat.jpeg",
+    // image: "/projects/eldeco-sonipat.jpeg", // hidden for now
   },
   {
     n: "02",
     title: "Commercial Development",
     copy: "Grade-A offices and open-air retail high streets built to occupier specification, with column-free plates and services that can be split or merged.",
     points: ["Office towers", "Retail high streets", "Built-to-suit"],
-    image:
-      "/projects/bptp-gurgaon.jpeg",
+    // image: "/projects/bptp-gurgaon.jpeg", // hidden for now
   },
   {
     n: "03",
     title: "Plotted Townships",
     copy: "Licensed colonies where roads, sewerage, power and the community centre are finished and handed to the RWA before the first plot changes hands.",
     points: ["DTCP licensing", "Full infrastructure", "Approved floor plans"],
-    image:
-      "/projects/rangoli-green-sonipat.jpeg",
+    // image: "/projects/rangoli-green-sonipat.jpeg", // hidden for now
   },
   {
     n: "04",
     title: "Turnkey Interiors",
     copy: "A fixed-price interior package delivered by the same team that built the shell — so nobody drills into a beam that was not meant to be drilled.",
     points: ["Fixed-price scope", "90-day delivery", "5-year warranty"],
-    image:
-      "/projects/dlf-gurgaon.jpeg",
+    // image: "/projects/dlf-gurgaon.jpeg", // hidden for now
   },
   {
     n: "05",
     title: "Facility Management",
     copy: "Our maintenance team stays on the property after the last unit sells, running the plant rooms, lifts and landscaping under an RWA-approved contract.",
     points: ["Plant operations", "Landscaping", "Security & access"],
-    image:
-      "/projects/sector-46-gurgaon.jpeg",
+    // image: "/projects/sector-46-gurgaon.jpeg", // hidden for now
   },
   {
     n: "06",
     title: "Joint Development",
     copy: "For landowners holding parcels in NCR — we take the approvals, construction and sales risk, and you take a share of the developed area or revenue.",
     points: ["Land aggregation", "Revenue or area share", "Full approvals"],
-    image:
-      "/projects/gk1-new-delhi.jpeg",
+    // image: "/projects/gk1-new-delhi.jpeg", // hidden for now
   },
 ];
 
@@ -79,7 +73,7 @@ const landowner = [
   {
     icon: Building2,
     title: "Built by our own team",
-    copy: "The same in-house construction division that built our forty-two projects, not a rotating cast of contractors.",
+    copy: "The same in-house construction division that built our seventeen projects, not a rotating cast of contractors.",
   },
   {
     icon: KeyRound,
